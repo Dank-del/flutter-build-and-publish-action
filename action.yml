@@ -1,6 +1,7 @@
 name: 'Builds - build Flutter APK and create github release'
 description: 'A GitHub Action that builds a Flutter APK'
 author: 'Sayan Biswas'
+
 branding:
   icon: 'maximize'
   color: 'blue'
@@ -27,10 +28,6 @@ outputs:
     # Define an output variable for the built APK.
     # Use the ${{ steps.build.outputs.built-apk }} syntax to access the value in the workflow.
 
-branding:
-  icon: 'package.svg'
-  color: 'purple'
-  # Add branding information for the action.
 
 permissions:
   contents: 'read'
@@ -58,9 +55,9 @@ steps:
     run: 'flutter doctor -v'
     # Check the Flutter environment.
 
-  - name: 'Checkout AniWatch code'
+  - name: 'Checkout code'
     uses: 'actions/checkout@v2'
-    # Checkout the AniWatch code using the "actions/checkout" action.
+    # Checkout the app code using the "actions/checkout" action.
 
   - name: 'Get packages'
     run: 'flutter pub get'
