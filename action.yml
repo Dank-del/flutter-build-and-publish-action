@@ -1,4 +1,4 @@
-name: 'Builds - build Flutter APK and create github release'
+name: 'triconnect Builds - build Flutter APK and create github release'
 description: 'A GitHub Action that builds a Flutter APK'
 author: 'Sayan Biswas'
 
